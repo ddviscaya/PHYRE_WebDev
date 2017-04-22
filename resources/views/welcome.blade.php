@@ -35,11 +35,36 @@
             }
         </style>
     </head>
-    <body>
+    <body onload="startTime()">
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title" id="txt"></div>
+                <!-- <body onload="startTime()"> -->
+                  <div id="txt"></div>
+                  <div id="demo"></div>
             </div>
         </div>
     </body>
+
+    <script>
+      var d = new Date();
+      document.getElementById("demo").innerHTML = d.toDateString();
+    </script>
+    <script>
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =
+      h + ":" + m + ":" + s;
+      var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+    </script>
 </html>
