@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Laravel</title>
+        <title>PHYRE</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
@@ -33,6 +33,9 @@
             .title {
                 font-size: 96px;
             }
+            .sub {
+                font-size: 35px;
+            }
         </style>
     </head>
     <body onload="startTime()">
@@ -40,8 +43,8 @@
             <div class="content">
                 <div class="title" id="txt"></div>
                 <!-- <body onload="startTime()"> -->
-                  <div id="txt"></div>
-                  <div id="demo"></div>
+                  <!-- <div id="txt"></div> -->
+                  <div class="sub" id="demo"></div>
             </div>
         </div>
     </body>
