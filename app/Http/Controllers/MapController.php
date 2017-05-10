@@ -17,7 +17,12 @@ class MapController extends Controller
      */
     public function index()
     {
-      Mapper::map(53.381128999999990000, -1.470085000000040000);
+      // Mapper::location('');
+
+      Mapper::map(14.6484946,121.066305);
+      // Mapper::informationWindow(14.6484946,121.066305, 'Content');
+      // Mapper::informationWindow(14.6484946,121.066305, 'Content', ['open' => true, 'maxWidth'=> 300, 'markers' => ['title' => 'Title']]);
+      // Mapper::map(52.381128999999990000, 0.470085000000040000)->informationWindow(53.381128999999990000, -1.470085000000040000, 'Content', ['markers' => ['animation' => 'DROP']]);
 
       return view('map');
     }

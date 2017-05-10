@@ -1,14 +1,14 @@
 <html>
   <title></title>
   <body>
-      <form class="form-horizontal" role="form" method="POST" action="{{ url('/phyre') }}">
+      <form class="form-horizontal" role="form" method="POST" action="{{ url('/') }}">
         {{ csrf_field() }}
           <div class="form-group">
               <label for="address" class="col-md-4 control-label">ADDRESS</label>
 
               <!-- <div class="col-md-6"> -->
                   <input id="address" type="string" class="form-control" name="address" value="" required>
-]            </div>
+            </div>
             <div class="form-group">
                 <label for="lng" class="col-md-4 control-label">LNG</label>
 
