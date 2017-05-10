@@ -10,5 +10,5 @@ class History extends Model
      *
      * @var array
      */
-     protected $fillable = ['address'];
+     protected $fillable = ['address','lat','lng'];
 }

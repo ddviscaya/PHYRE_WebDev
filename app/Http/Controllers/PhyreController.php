@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use View;
 use App\History;
+use Log;
 class PhyreController extends Controller
 {
     /**
@@ -21,12 +22,30 @@ class PhyreController extends Controller
        //ilagay sa db
        History::create(['address' => $_addr]);
       //  DB::table('history')->insert(['address' => $_addr,'created_at' =>, 'updated_at'=>s ]);
-       return View::make('alert')->with('address', $_addr);
+       //return View::make('alert')->with('address', $_addr);
      }
 
-    public function index()
+    public function index(Request $request)
     {
         //
+        if($request){
+          $_addr = $request->input('address');
+          $_lat = $request->input('lat');
+          $_lng = $request->input('lng');
+          History::create([
+            'address' => $_addr,
+            'lng' => $_lng,
+            'lat' => $_lat
+          ]);
+          // console "receive request from";
+          // return View::make('alert')->with('address', $_addr);
+
+        }
+        else{
+          echo "no requests";
+          return view('/');
+
+        }
     }
 
     /**

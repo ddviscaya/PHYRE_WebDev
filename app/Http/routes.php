@@ -19,4 +19,4 @@ Route::get('/form', function () {
 });
 
 Route::get('/map', 'MapController@index');
-Route::post('/phyre/alert','PhyreController@alert');
+Route::post('/','PhyreController@index');

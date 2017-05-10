@@ -15,6 +15,8 @@ class CreateHistoryTable extends Migration
       Schema::create('histories', function (Blueprint $table) {
                   $table->increments('id');
                   $table->string('address');
+                  $table->float('lng');
+                  $table->float('lat');
                   $table->timestamps();
               });
     }
