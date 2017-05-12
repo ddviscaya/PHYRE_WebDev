@@ -17,6 +17,7 @@ Route::get('/', function () {
 Route::get('/form', function () {
     return view('form');
 });
-
+Route::get('/history','PhyreController@getData');
+Route::get('/welcome','PhyreController@lala');
 Route::get('/map', 'MapController@index');
 Route::post('/','PhyreController@index');

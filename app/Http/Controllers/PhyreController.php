@@ -113,4 +113,19 @@ class PhyreController extends Controller
     {
         //
     }
+    function getData(Request $request)
+    {
+        $data['data'] = DB::table('histories') -> get();
+        if (count($data)>0){
+            return view('history', $data);
+        }
+        else{
+            return view('history');
+        }
+    }
+
+    function lala(Request $request){
+        return view('welcome');
+    }
 }
+
