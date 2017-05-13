@@ -50,57 +50,57 @@
               margin-left: auto;
               margin-right: auto;
               text-align: center;
-            }
-
-            .textt {
-              text-align: center;
               font-size: 80x;
-              color: red;
-
             }
+
+
         </style>
     </head>
     <body onload="startTime()">
-        
+
         <div class="container">
         <nav class="navbar navbar-inverse bg-inverse navbar-fixed-top">
           <div class="container-fluid">
               <div class="navbar-header">
-                <a href="#" class="navbar-brand">PHYRE</a> 
+                <a href="#" class="navbar-brand">PHYRE</a>
               </div>
+
               <div>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="#">Home</a></li>
                     <li><a href="{{'\history'}}">History</a></li>
-                  
                 </ul>
-                
               </div>
-                
           </div>
-                   
+
         </nav>
- 
           <header>
-            <div class=".header">
-              <img src="{{ asset('img/redlog.png') }}" /> 
+            <div id="pic1"class=".header">
+              <img src="{{ asset('img/bluelog.png') }}" />
+              <br>
+              <strong>Blue means FINE</strong>
             </div>
-            <div class="textt">
-              <strong>Red means FIRE</strong>
-          
+
+            <div id="pic2"class=".header" style="display:none">
+              <img src="{{ asset('img/redlog.png') }}" />
+              <br>
+              <strong style="color:red">RED MEANS FIRE</strong>
+              <br>
+              <!-- should go sa map -->
+              <a role="button" class="btn btn-danger" href="{{ url('/alert') }}">Click To View</a>
+
             </div>
 
             <div class="content">
                 <div class="title" id="txt"></div>
-                <!-- <body onload="startTime()"> -->
-                  <!-- <div id="txt"></div> -->
-                  <div class="sub" id="demo"></div>
+                <div class="sub" id="demo"></div>
             </div>
-      
+            <button type="button" onclick="document.getElementById('pic2').style.display='block';document.getElementById('pic1').style.display='none';">Click Me!</button>
+
 
         </header>
       </div>
-      
+
     </body>
 
     <script>

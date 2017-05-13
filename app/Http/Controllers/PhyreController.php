@@ -18,9 +18,11 @@ class PhyreController extends Controller
      */
      public function alert(Request $request)
      {
-       $_addr = $request->input('address');
+      //  $_addr = $request->input('address');
        //ilagay sa db
-       History::create(['address' => $_addr]);
+      //  History::create(['address' => $_addr]);
+      $last = DB::table('histories')->orderBy('created_at', 'desc')->first();
+      return View::make('map')->with('address', $last);
       //  DB::table('history')->insert(['address' => $_addr,'created_at' =>, 'updated_at'=>s ]);
        //return View::make('alert')->with('address', $_addr);
      }
@@ -128,4 +130,3 @@ class PhyreController extends Controller
         return view('welcome');
     }
 }
-

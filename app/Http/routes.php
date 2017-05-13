@@ -21,3 +21,5 @@ Route::get('/history','PhyreController@getData');
 Route::get('/welcome','PhyreController@lala');
 Route::get('/map', 'MapController@index');
 Route::post('/','PhyreController@index');
+
+Route::get('/alert','MapController@alert');
